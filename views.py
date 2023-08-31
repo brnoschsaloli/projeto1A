@@ -3,7 +3,7 @@ from database import Database, Note
 import urllib.parse
 
 db = Database("banco")
-def e404(request):
+def e404():
     response = build_response()
     return response + load_template('404.html').encode()
 

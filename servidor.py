@@ -38,7 +38,7 @@ while True:
             id = int(route.split('/')[-1])
             response = edit(request, id)
     else:
-        response = e404(request)
+        response = e404()
     client_connection.sendall(response)
 
     client_connection.close()
