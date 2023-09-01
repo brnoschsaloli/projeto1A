@@ -19,31 +19,40 @@
   </head>
 
   <body>
-    <div class="appbar">
+    <div id="appbar" class="appbar">
       <img src="../img/logo-getit.png" class="logo" />
       <span class="subtitle">Como o Post-it, mas com outro verbo</span>
+      <label class="switch">
+        <input  id="dark-button" type="checkbox">
+        <span class="slider round"></span>
+      </label>
+
     </div>
 
     <main class="container">
       <!-- method="post" foi removido apenas para o exemplo funcionar sem o servidor -->
       <form class="form-card" method="post">
         <input
+          id="titulo"
           class="form-card-title"
           type="text"
           name="titulo"
           placeholder="T&iacute;tulo"
         />
         <input
+          id="descricao"
           class="autoresize"
           name="detalhes"
           placeholder="Digite o conte&uacute;do..."
         ></input>
-        <button class="btn" type="submit">Criar</button>
+        <button id="form-button" class="btn" type="submit">Criar</button>
       </form>
 
       <ul class="card-container">
         {notes}
       </ul>
+
+
     </main>
 
     <script type="text/javascript" src="templates/getit.js"></script>

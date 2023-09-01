@@ -19,15 +19,20 @@
   </head>
 
   <body>
-    <div class="appbar">
+    <div id="appbar" class="appbar">
       <img src="../img/logo-getit.png" class="logo" />
       <span class="subtitle">Como o Post-it, mas com outro verbo</span>
+      <label class="switch">
+        <input id="dark-button" type="checkbox" >
+        <span class="slider round"></span>
+      </label>
     </div>
     <main class="container">
       <!-- method="post" foi removido apenas para o exemplo funcionar sem o servidor -->
-      <a style="display: flex; justify-content: flex-start; padding: 10px; color: #515151; text-decoration: none;" href="../">&#8678; cancelar</a>
+      <a style="display: flex; justify-content: flex-start; padding: 10px; color: #717171; text-decoration: none;" href="../">&#8678; cancelar</a>
       <form class="form-card" method="post">
         <input
+          id="titulo"
           class="form-card-title"
           type="text"
           name="titulo"
@@ -35,12 +40,13 @@
           value="{titulo}"
         />
         <input
+          id="descricao"
           value = "{conteudo}"
           class="autoresize"
           name="detalhes"
           placeholder="Digite o conteudo..."
         ></input>
-        <button class="btn" type="submit">Editar</button>
+        <button id="form-button" class="btn" type="submit">Editar</button>
       </form>
     </main>
 

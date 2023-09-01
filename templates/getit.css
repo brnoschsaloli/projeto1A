@@ -1,6 +1,18 @@
 html,
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #fff;
+  height: 100%;
+}
+
+.dark-mode {
+  background-color: #2b2b2b;
+}
+
+.dark-mode-form {
+  background-color: #2b2b2b;
+  color: rgba(236, 240, 241, 0.3);
+
 }
 
 .btn {
@@ -16,6 +28,23 @@ body {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 
   background-color: #f7d736;
+
+  transition: background-color 0.3s;
+}
+
+.btn-dark {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+
+  overflow: hidden;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+
+  background-color: #275ac6;
 
   transition: background-color 0.3s;
 }
@@ -89,14 +118,25 @@ body {
 }
 
 .appbar {
+  width: 100%;
   background-color: #f7d736;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.appbar-dark {
+  width: 100%;
+  background-color: #275ac6;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .form-card {
+  color: #fff;
   margin: auto;
   margin-top: 1.5%;
   margin-bottom: 10px;
@@ -159,18 +199,22 @@ body {
 .card-color-1 {
   background-color: #ead3a7;
 }
+
 .card-color-2 {
   background-color: #abe9c1;
 }
+
 .card-color-3 {
   background-color: #fae890;
 }
+
 .card-color-4 {
   background-color: #ef89ba;
 }
 .card-color-5 {
   background-color: #9de0f5;
 }
+
 
 .card-rotation-1 {
   transform: rotate(-3.5deg)
@@ -220,4 +264,67 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
